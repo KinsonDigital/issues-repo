@@ -51,7 +51,15 @@ body:
 - type: markdown
   attributes:
     value: |
-      This is some **markdown** that should be showing up.
+      This is some **markdown** that should be showing up WITHOUT a collapsible region
+
+- type: markdown
+  attributes:
+    value: |
+      <details closed><summary>Expand for more information about the different types of changes.</summary>
+
+      This is some **markdown** that should be showing up WITH a collapsible region
+      </details>
 
 - type: markdown
   attributes:
