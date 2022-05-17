@@ -51,18 +51,17 @@ body:
 - type: markdown
   attributes:
     value: |
-      <details closed><summary>Expand for more info</summary>
+      <details open><summary>Expand for more information about the different types of changes.</summary>
       
-        This is also a closed details thingy.
-        | C1 | C2 |
-        |-------|------|
-        | R1C1 | R1C2 |  
-      </details>      
-
-      Labels that can be added depending on what kinds of changes:
-      | col 1 | col2 |
-      |-------|------|
-      | row 2 | row 2 |
+      | Type Of Change         | Label |
+      |-------------------------|------|
+      | Bug Fixes                    | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%90%9Bbug |
+      | Breaking Changes      | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%92%A3breaking%20changes |
+      | Enhancement             | https://github.com/KinsonDigital/Velaptor/labels/enhancement |
+      | Workflow Changes     | https://github.com/KinsonDigital/Velaptor/labels/workflow |
+      | Code Doc Changes     | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%93%91documentation%2Fcode |
+      | Product Doc Changes | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%93%9Ddocumentation%2Fproduct |
+      </details>        
 
 - type: textarea
   attributes:
