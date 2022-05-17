@@ -34,11 +34,20 @@ body:
 
 - type: checkboxes
   attributes:
-    label: ToDo Items
-    description: Complete the following items before asking for a PR review.
+    label: Perform Release To Do List
+    description: Complete the following items to perform a release.
     options:
-    - label: Priority label added to issue (**_low priority_**, **_medium priority_**, or **_high priority_**)
-    - label: Issue linked to the proper project
+    - label: |
+        Add the appropriate labels to this issue template based on the issues being released
+        | col 1 | col2 |
+        |-------|------|
+        | row 2 | row 2 |
+    - label: QA Testing finished and all tests pass.
+    - label: Branch used for release has been checked out locally and all unit tests have passed.
+    - label: Version in project file updated.  (Update <Version/> and <FileVersion/> tags)
+    - label: Release notes created and added to the correct release branch.
+    - label: The release displayed in [GitHub Releases](https://github.com/KinsonDigital/Velaptor/releases) has been verified to be correct.
+
 
 - type: textarea
   attributes:
