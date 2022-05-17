@@ -53,13 +53,17 @@ body:
     value: |
       This is some **markdown** that should be showing up WITHOUT a collapsible region
 
-- type: markdown
+- type: textarea
   attributes:
+    label: Text MarkDown Stuff
     value: |
       <details closed><summary>Expand for more information about the different types of changes.</summary>
 
       This is some **markdown** that should be showing up WITH a collapsible region
       </details>
+  validations:
+    required: true
+    render: markdown
 
 - type: markdown
   attributes:
