@@ -41,22 +41,28 @@ body:
     label: Perform Release To Do List
     description: Complete the following items to perform a release.
     options:
-    - label: |
-        Add the appropriate labels to this issue template based on the issues being released
-
-        ``` md
-        This is a **_table_**
-
-        | col 1 | col2 |
-        |-------|------|
-        | row 2 | row 2 |
-        ```
+    - label: Add the appropriate labels to this issue template based on the issues being released
     - label: QA Testing finished and all tests pass.
     - label: Branch used for release has been checked out locally and all unit tests have passed.
     - label: Version in project file updated.  (Update <Version/> and <FileVersion/> tags)
     - label: Release notes created and added to the correct release branch.
     - label: The release displayed in [GitHub Releases](https://github.com/KinsonDigital/Velaptor/releases) has been verified to be correct.
 
+- type: markdown
+  attributes:
+    value: |
+      <details closed><summary>Expand for more info</summary>
+      
+        This is also a closed details thingy.
+        | C1 | C2 |
+        |-------|------|
+        | R1C1 | R1C2 |  
+      </details>      
+
+      Labels that can be added depending on what kinds of changes:
+      | col 1 | col2 |
+      |-------|------|
+      | row 2 | row 2 |
 
 - type: textarea
   attributes:
