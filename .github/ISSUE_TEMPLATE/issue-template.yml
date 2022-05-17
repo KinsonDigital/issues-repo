@@ -32,6 +32,10 @@ body:
     required: true
     render: markdown
 
+  # <details closed><summary>Expand for more info</summary>
+  # <!--Make sure to have an extra space here before the content for it to render correctly-->
+  # </details>
+
 - type: checkboxes
   attributes:
     label: Perform Release To Do List
@@ -39,9 +43,14 @@ body:
     options:
     - label: |
         Add the appropriate labels to this issue template based on the issues being released
+
+        ``` md
+        This is a **_table_**
+
         | col 1 | col2 |
         |-------|------|
         | row 2 | row 2 |
+        ```
     - label: QA Testing finished and all tests pass.
     - label: Branch used for release has been checked out locally and all unit tests have passed.
     - label: Version in project file updated.  (Update <Version/> and <FileVersion/> tags)
