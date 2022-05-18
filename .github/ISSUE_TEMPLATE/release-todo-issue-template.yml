@@ -39,7 +39,7 @@ body:
     label: "Additional information below:"
     description: DO NOT CHANGE ANYTHING BELOW!!
     value: |
-      <details closed><summary>Expand for more information about release labels.</summary>
+      **_<details closed><summary>Expand for more information about release labels.</summary>_**
       
       | Type Of Release       | Label Used                                                                             |
       |-----------------------|----------------------------------------------------------------------------------------|
@@ -51,8 +51,8 @@ body:
       </details>
 
       ---
-      
-      <details closed><summary>Expand for more information about unit tests.</summary>
+
+      **_<details closed><summary>Expand for more information about unit tests.</summary>_**
       
       Reasons for local unit test execution:
       - Unit tests might pass locally but not in the CI environment during the status check process or vice-versa.
@@ -61,7 +61,7 @@ body:
 
       ---
 
-      <details closed><summary>Expand for more information about updating the version.</summary>
+      **_<details closed><summary>Expand for more information about updating the version.</summary>_**
       
       The version can be updated by setting the values of the `<Version/>` and `<FileVersion/>` XML tags in the project file.
 
@@ -78,7 +78,7 @@ body:
 
       ---
 
-      <details closed><summary>Expand for more information about the different types of changes.</summary>
+      **_<details closed><summary>Expand for more information about the different types of changes.</summary>_**
       
       | Types Of Changes    | Label                                                                                |
       |---------------------|--------------------------------------------------------------------------------------|
@@ -92,7 +92,7 @@ body:
 
       ---
 
-      <details open><summary>Expand for more information about release notes.</summary>
+      **_<details closed><summary>Expand for more information about release notes.</summary>_**
 
       The release notes go into a sub folder in the **_Release Notes_** folder.
       The type of release depends on where the release notes are stored.
