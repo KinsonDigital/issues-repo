@@ -1,0 +1,120 @@
+name: 🚀 Release To Do List
+description: Used to perform a release
+title: "🚀Release To <release type here> - <release number here>"
+body:
+- type: textarea
+  attributes:
+    label: Issues Released
+    placeholder: |
+      Create a list of all the items being released.
+      Example:
+      - #10
+      - #20
+    description: The list of issues that are getting released.
+  validations:
+    required: true
+    render: markdown
+
+- type: checkboxes
+  attributes:
+    label: Perform Release To Do List
+    description: Complete the following items to perform a release.
+    options:
+    - label: Manual QA Testing completed.
+    - label: Title updated by replacing the '**_\<release type here\>_**' section with the type of release.
+    - label: Title updated by replacing the '**_\<release number here\>_**' section with the release number.
+    - label: Issues listed in the **Issues Released** section above for all issues being released.
+    - label: Appropriate release label added to this issue based on the type of release.
+    - label: Appropriate labels added to this issue to reflect the type of changes going in this release.  Refer to each issue for label reference.
+    - label: Correct release PR linked to this issue.
+    - label: All unit tests have been ran and have passed locally. (Check out the appropriate release branch before running tests).
+    - label: Version in project file updated.
+    - label: Release notes created and added to the correct release branch.
+
+- type: textarea
+  attributes:
+    label: "Additional information below:"
+    description: DO NOT CHANGE ANYTHING!!
+    value: |
+      <details closed><summary>Expand for more information about release labels.</summary>
+      
+      | Type Of Release       | Label Used                                                                             |
+      |-----------------------|----------------------------------------------------------------------------------------|
+      | QA Preview Release    | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%9A%80QA%20Preview%20Release    |
+      | Preview Release       | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%9A%80Preview%20Release         |
+      | QA Production Release | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%9A%80QA%20Production%20Release |
+      | Production Release    | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%9A%80Production%20Release      |
+      | Hot Fix Release       | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%9A%80Hot%20Fix%20Release       |
+      </details>
+
+      <details closed><summary>Expand for more information about unit tests.</summary>
+      
+      Reasons for local unit test execution:
+      - Unit tests might pass locally but not in the CI environment during the status check process or vice-versa.
+      - Tests might pass on the developer's machine but not necessarily on the code reviewer's machine.
+      </details>
+
+      <details closed><summary>Expand for more information about updating the version.</summary>
+      
+      The version can be updated by setting the values of the `<Version/>` and `<FileVersion/>` XML tags in the project file.
+
+      ``` xml
+      <!--Syntax for preview releases-->
+      <Version>1.2.3-preview.4</Version>
+      <FileVersion>1.2.3-preview.4</FileVersion>
+
+      <!--Syntax for production releases-->
+      <Version>1.2.3</Version>
+      <FileVersion>1.2.3</FileVersion>
+      ```
+      </details>
+
+      <details closed><summary>Expand for more information about the different types of changes.</summary>
+      
+      | Types Of Changes    | Label                                                                                |
+      |---------------------|--------------------------------------------------------------------------------------|
+      | Bug Fixes           | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%90%9Bbug                     |
+      | Breaking Changes    | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%92%A3breaking%20changes      |
+      | Enhancement         | https://github.com/KinsonDigital/Velaptor/labels/enhancement                         |
+      | Workflow Changes    | https://github.com/KinsonDigital/Velaptor/labels/workflow                            |
+      | Code Doc Changes    | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%93%91documentation%2Fcode    |
+      | Product Doc Changes | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%93%9Ddocumentation%2Fproduct |
+      </details>
+
+      <details closed><summary>Expand for more information about release notes.</summary>
+      
+      The release notes go into a sub folder in the **Release Notes** folder.
+      The type of release depends on where the release notes are stored.
+      - **Preview Release Notes** go into the `~/Documentation/ReleaseNotes/PreviewReleases` folder.
+      - **Production Release Notes** go into the `~/Documentation/ReleaseNotes/ProductionReleases` folder.
+
+      Also, any changes such as release notes and version updates should be committed to the release branch being released.
+      </details>
+  validations:
+    required: true
+    render: markdown
+
+
+# POST RELEASE TODO LIST
+- type: checkboxes
+  attributes:
+    label: Post Release To Do List
+    description: Verify that release went smoothly.
+    options:
+    - label: The release displayed in [GitHub Releases](https://github.com/KinsonDigital/Velaptor/releases) is correct.    
+    - label: The [nuget package](https://www.nuget.org/packages/KinsonDigital.Velaptor/) has been successfully deployed to public repository.
+    - label: Announcement of release on [Twitter](https://twitter.com/KDCoder) verified. (Announcement should be performed automatically with the release)
+    - label: Announcement has been pushed to [Ko-Fi](https://ko-fi.com/kinsondigital).
+    - label: Announcement has been pushed to the correct [GitHub Release Announcements Discussion Board](https://github.com/KinsonDigital/Velaptor/discussions/categories/releases).
+    - label: Announcement has been pushed to the Discord channel.
+
+
+# CODE OF CONDUCT
+- type: checkboxes
+  id: terms
+  attributes:
+    label: Code of Conduct
+    description: By submitting this issue, you agree to follow our [Code of Conduct](../../code_of_conduct.md)
+    options:
+      - label: I agree to follow this project's Code of Conduct
+        required: true
