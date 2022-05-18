@@ -57,9 +57,7 @@ body:
   attributes:
     label: Text MarkDown Stuff
     value: |
-      <details closed><summary>Expand for more information about the different types of changes.</summary>
-
-      This is some **markdown** that should be showing up WITH a collapsible region
+      <details closed><summary>Expand for more information about the different types of changes.</summary>This is some **markdown** that should be showing up WITH a collapsible region
       </details>
   validations:
     required: true
