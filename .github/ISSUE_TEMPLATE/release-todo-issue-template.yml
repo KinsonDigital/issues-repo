@@ -24,13 +24,14 @@ body:
     - label: Manual QA Testing completed.
     - label: Title updated by replacing the '**_\<release type here\>_**' section with the type of release.
     - label: Title updated by replacing the '**_\<release number here\>_**' section with the release number.
-    - label: Issues listed in the **Issues Released** section above for all issues being released.
+    - label: Issues listed in the **_Issues Released_** section above for all issues being released.
     - label: Appropriate release label added to this issue based on the type of release.
     - label: Appropriate labels added to this issue to reflect the type of changes going in this release.  Refer to each issue for label reference.
     - label: Correct release PR linked to this issue.
-    - label: All unit tests have been ran and have passed locally. (Check out the appropriate release branch before running tests).
+    - label: All unit tests have been executed locally and have passed. (Check out the appropriate release branch before running tests).
     - label: Version in project file updated.
-    - label: Release notes created and added to the correct release branch.
+    - label: Release notes created and added.
+    - label: All changes made directly on the release branch.
 
 
 - type: textarea
@@ -49,12 +50,16 @@ body:
       | Hot Fix Release       | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%9A%80Hot%20Fix%20Release       |
       </details>
 
+      ---
+      
       <details closed><summary>Expand for more information about unit tests.</summary>
       
       Reasons for local unit test execution:
       - Unit tests might pass locally but not in the CI environment during the status check process or vice-versa.
       - Tests might pass on the developer's machine but not necessarily on the code reviewer's machine.
       </details>
+
+      ---
 
       <details closed><summary>Expand for more information about updating the version.</summary>
       
@@ -71,6 +76,8 @@ body:
       ```
       </details>
 
+      ---
+
       <details closed><summary>Expand for more information about the different types of changes.</summary>
       
       | Types Of Changes    | Label                                                                                |
@@ -83,14 +90,27 @@ body:
       | Product Doc Changes | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%93%9Ddocumentation%2Fproduct |
       </details>
 
-      <details closed><summary>Expand for more information about release notes.</summary>
-      
-      The release notes go into a sub folder in the **Release Notes** folder.
-      The type of release depends on where the release notes are stored.
-      - **Preview Release Notes** go into the `~/Documentation/ReleaseNotes/PreviewReleases` folder.
-      - **Production Release Notes** go into the `~/Documentation/ReleaseNotes/ProductionReleases` folder.
+      ---
 
-      Also, any changes such as release notes and version updates should be committed to the release branch being released.
+      <details open><summary>Expand for more information about release notes.</summary>
+
+      The release notes go into a sub folder in the **_Release Notes_** folder.
+      The type of release depends on where the release notes are stored.
+      - **Preview Release Notes** go into the **_~/Documentation/ReleaseNotes/PreviewReleases_** folder.
+      - **Production Release Notes** go into the **_~/Documentation/ReleaseNotes/ProductionReleases_** folder.
+
+      Release note files are in markdown format and the name must follow a particular syntax.
+      This is so the CI/CD can automatically pick up the release notes and add them as assets to the release.
+
+      #### Release Notes File Name Syntax:
+      - **Preview Release Notes:**
+        - **Syntax:** Release-Notes-v\<_major_\>.\<_minor_\>.\<_patch_\>-preview.\<_prev-num_\>.md
+        - **Example:** Release-Notes-v1.0.0-preview.4.md
+      - **Production Release Notes:**
+        - **Syntax:** Release-Notes-v\<_major_\>.\<_minor_\>.\<_patch_\>.md
+        - **Example:** Release-Notes-v1.0.0.md
+
+      Any changes such as release notes and version updates should be committed to the release branch being released.
       </details>
   validations:
     required: true
