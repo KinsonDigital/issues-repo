@@ -50,15 +50,12 @@ body:
 
 - type: markdown
   attributes:
-    value: |
-      This is some **markdown** that should be showing up WITHOUT a collapsible region
+    value: https://github.com/KinsonDigital/issues-repo/labels/bug
 
 - type: textarea
   attributes:
     label: Text MarkDown Stuff
-    value: |
-      <details closed><summary>Expand for more information about the different types of changes.</summary>This is some **markdown** that should be showing up WITH a collapsible region
-      </details>
+    value: https://github.com/KinsonDigital/issues-repo/labels/bug
   validations:
     required: true
     render: markdown
@@ -68,14 +65,11 @@ body:
     value: |
       <details closed><summary>Expand for more information about the different types of changes.</summary>
       
-      | Types Of Changes    | Label                                                                                |
-      |---------------------|--------------------------------------------------------------------------------------|
-      | Bug Fixes           | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%90%9Bbug                     |
-      | Breaking Changes    | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%92%A3breaking%20changes      |
-      | Enhancement         | https://github.com/KinsonDigital/Velaptor/labels/enhancement                         |
-      | Workflow Changes    | https://github.com/KinsonDigital/Velaptor/labels/workflow                            |
-      | Code Doc Changes    | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%93%91documentation%2Fcode    |
-      | Product Doc Changes | https://github.com/KinsonDigital/Velaptor/labels/%F0%9F%93%9Ddocumentation%2Fproduct |
+      https://github.com/KinsonDigital/issues-repo/labels/bug
+
+      | Types Of Changes    | Label                                                   |
+      |---------------------|---------------------------------------------------------|
+      | Bug Fixes           | https://github.com/KinsonDigital/issues-repo/labels/bug |
       </details>
 
 - type: textarea
