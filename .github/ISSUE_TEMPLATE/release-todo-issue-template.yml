@@ -15,6 +15,11 @@ body:
     required: true
     render: markdown
 
+- type: textarea
+  attributes:
+    label: ---
+    description: DO NOT CHANGE ANYTHING!!
+    
 - type: checkboxes
   attributes:
     label: Perform Release To Do List
@@ -30,6 +35,11 @@ body:
     - label: All unit tests have been ran and have passed locally. (Check out the appropriate release branch before running tests).
     - label: Version in project file updated.
     - label: Release notes created and added to the correct release branch.
+
+- type: textarea
+  attributes:
+    label: ---
+    description: DO NOT CHANGE ANYTHING!!
 
 - type: textarea
   attributes:
@@ -94,6 +104,10 @@ body:
     required: true
     render: markdown
 
+- type: textarea
+  attributes:
+    label: ---
+    description: DO NOT CHANGE ANYTHING!!
 
 # POST RELEASE TODO LIST
 - type: checkboxes
@@ -108,6 +122,10 @@ body:
     - label: Announcement has been pushed to the correct [GitHub Release Announcements Discussion Board](https://github.com/KinsonDigital/Velaptor/discussions/categories/releases).
     - label: Announcement has been pushed to the Discord channel.
 
+- type: textarea
+  attributes:
+    label: ---
+    description: DO NOT CHANGE ANYTHING!!
 
 # CODE OF CONDUCT
 - type: checkboxes
