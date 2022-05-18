@@ -60,8 +60,9 @@ body:
     required: true
     render: markdown
 
-- type: markdown
+- type: textarea
   attributes:
+    label: Table of labels
     value: |
       <details closed><summary>Expand for more information about the different types of changes.</summary>
       
