@@ -10,8 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Print Message
-      id: print-message
-      uses: KinsonDigital/NETGitHubActionSample@v1.0.0
-      with:
-        message: "Helle GitHub Actions!!"
+    - name: Print Stuff
+      id: print-stuff
+      shell: pwsh
+      run: |
+        Write-Output "::notice file=notice.js,line=10,endLine={endLine},title=Test Notice::omg notice"
+        Write-Output "::warning file=app.js,line=30,title=Test Warning::omg warning"
+        Write-Output "::error file={name},line=20,endLine={endLine},title=Test Error::omg error"
+
