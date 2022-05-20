@@ -11,19 +11,17 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Print Stuff
-      id: print-stuff
-      shell: pwsh
       run: |
         $error = "This is the exception message here\n";
-        $error += "at System.Environment.get_StackTrace()\n";
-        $error += "at VersionMiner.Exceptions.ActionException..ctor(String message) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Exceptions\ActionException.cs:line 14\n";
-        $error += "at VersionMiner.Exceptions.NoXMLValueException..ctor(String message) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Exceptions\NoXMLValueException.cs:line 21\n";
-        $error += "at Program.<>c__DisplayClass0_0.<<Main>$>b__4(IEnumerable`1 errors) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Program.cs:line 72\n";
-        $error += "at CommandLine.ParserResultExtensions.WithNotParsed[T](ParserResult`1 result, Action`1 action)\n";
-        $error += "at Program.<Main>$(String[] args) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Program.cs:line 65\n";
-        $error += "at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)\n";
-        $error += "at Program.<Main>$(String[] args)\n";
-        $error += "at Program.<Main>(String[] args)";
+        $error = $error + "at System.Environment.get_StackTrace()\n";
+        $error = $error + "at VersionMiner.Exceptions.ActionException..ctor(String message) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Exceptions\ActionException.cs:line 14\n";
+        $error = $error + "at VersionMiner.Exceptions.NoXMLValueException..ctor(String message) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Exceptions\NoXMLValueException.cs:line 21\n";
+        $error = $error + "at Program.<>c__DisplayClass0_0.<<Main>$>b__4(IEnumerable`1 errors) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Program.cs:line 72\n";
+        $error = $error + "at CommandLine.ParserResultExtensions.WithNotParsed[T](ParserResult`1 result, Action`1 action)\n";
+        $error = $error + "at Program.<Main>$(String[] args) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Program.cs:line 65\n";
+        $error = $error + "at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)\n";
+        $error = $error + "at Program.<Main>$(String[] args)\n";
+        $error = $error + "at Program.<Main>(String[] args)";
 
         Write-Output "::notice::omg notice"
         Write-Output "::warning ::omg warning"
@@ -34,6 +32,7 @@ jobs:
         Write-Output that is grouped,
         Write-Output and is pretty cool.
         Write-Output ::endgroup::
+      shell: pwsh
 
 
 # Write-Output "::notice file=notice.js,line=10,endLine={endLine},title=Test Notice::omg notice"
