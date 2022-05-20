@@ -14,7 +14,12 @@ jobs:
       id: print-stuff
       shell: pwsh
       run: |
-        Write-Output "::notice file=notice.js,line=10,endLine={endLine},title=Test Notice::omg notice"
-        Write-Output "::warning file=app.js,line=30,title=Test Warning::omg warning"
-        Write-Output "::error file={name},line=20,endLine={endLine},title=Test Error::omg error"
+        Write-Output "::notice::omg notice"
+        Write-Output "::warning ::omg warning"
+        Write-Output "::error   ::omg error"
 
+
+
+# Write-Output "::notice file=notice.js,line=10,endLine={endLine},title=Test Notice::omg notice"
+# Write-Output "::warning file=app.js,line=30,title=Test Warning::omg warning"
+# Write-Output "::error file={name},line=20,endLine={endLine},title=Test Error::omg error"
