@@ -18,6 +18,11 @@ jobs:
         Write-Output "::warning ::omg warning"
         Write-Output "::error   ::omg error"
 
+        ::group::My Group
+        This is a message,
+        that is grouped,
+        and is pretty cool.
+        ::endgroup::
 
 
 # Write-Output "::notice file=notice.js,line=10,endLine={endLine},title=Test Notice::omg notice"
