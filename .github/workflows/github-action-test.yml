@@ -12,20 +12,21 @@ jobs:
 
     - name: Print Stuff
       run: |
-        $error = "This is the exception message here\n";
-        $error = $error + "at System.Environment.get_StackTrace()\n";
-        $error = $error + "at VersionMiner.Exceptions.ActionException..ctor(String message) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Exceptions\ActionException.cs:line 14\n";
-        $error = $error + "at VersionMiner.Exceptions.NoXMLValueException..ctor(String message) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Exceptions\NoXMLValueException.cs:line 21\n";
-        $error = $error + "at Program.<>c__DisplayClass0_0.<<Main>$>b__4(IEnumerable`1 errors) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Program.cs:line 72\n";
-        $error = $error + "at CommandLine.ParserResultExtensions.WithNotParsed[T](ParserResult`1 result, Action`1 action)\n";
-        $error = $error + "at Program.<Main>$(String[] args) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Program.cs:line 65\n";
-        $error = $error + "at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)\n";
-        $error = $error + "at Program.<Main>$(String[] args)\n";
-        $error = $error + "at Program.<Main>(String[] args)";
+        $errorMsg = "This is the exception message here`n";
+        $errorMsg += "`tat System.Environment.get_StackTrace()`n";
+        $errorMsg += "`tat VersionMiner.Exceptions.ActionException..ctor(String message) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Exceptions\ActionException.cs:line 14`n";
+        $errorMsg += "`tat VersionMiner.Exceptions.NoXMLValueException..ctor(String message) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Exceptions`noXMLValueException.cs:line 21`n";
+        $errorMsg += "`tat Program.<>c__DisplayClass0_0.<<Main>$>b__4(IEnumerable`1 errors) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Program.cs:line 72`n";
+        $errorMsg += "`tat CommandLine.ParserResultExtensions.WithNotParsed[T](ParserResult`1 result, Action`1 action)`n";
+        $errorMsg += "`tat Program.<Main>`$(String[] args) in K:\SOFTWARE DEVELOPMENT\PERSONAL\VersionMiner\VersionMiner\Program.cs:line 65`n";
+        $errorMsg += "`tat System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)`n";
+        $errorMsg += "`tat Program.<Main>`$(String[] args)`n";
+        $errorMsg += "`tat Program.<Main>(String[] args)";
+
 
         Write-Output "::notice::omg notice"
         Write-Output "::warning ::omg warning"
-        Write-Output "::error   ::${{ $error }}"
+        Write-Output "::error   ::${{ $errorMsg }}"
 
         Write-Output ::group::MyGroup
         Write-Output This is a message,
