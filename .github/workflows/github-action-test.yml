@@ -29,7 +29,6 @@ jobs:
         Write-Output "::warning ::omg warning"
         Write-Output "::error   ::${{ $error }}"
 
-# The name of the group cannot have spaces
         Write-Output ::group::MyGroup
         Write-Output This is a message,
         Write-Output that is grouped,
