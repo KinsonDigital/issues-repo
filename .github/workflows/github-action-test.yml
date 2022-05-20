@@ -26,13 +26,13 @@ jobs:
 
         Write-Output "::notice::omg notice"
         Write-Output "::warning ::omg warning"
-        Write-Output "::error   ::${{ $errorMsg }}"
+        Write-Output "::error   ::$errorMsg"
 
-        Write-Output ::group::MyGroup
-        Write-Output This is a message,
-        Write-Output that is grouped,
-        Write-Output and is pretty cool.
-        Write-Output ::endgroup::
+        Write-Output "::group::MyGroup"
+        Write-Output "This is a message,"
+        Write-Output "that is grouped,"
+        Write-Output "and is pretty cool."
+        Write-Output "::endgroup::"
       shell: pwsh
 
 
